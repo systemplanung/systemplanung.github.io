@@ -1,0 +1,53 @@
+<html>
+  <head>
+
+	<title>Lernhilfe/L&Uuml;ftung</title>
+    <style>
+      body {
+      background-color: #000000;
+      }
+	   .correct-answer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+   <center><font color=white> <font size="6em">  <img src="Images/Lueftung_Quiz.png" /> <p style="font-family:Monospace">
+    <h3>Frage: Wie heißt die Hauptstadt von Frankreich?</h3>
+    <input type="text" id="answer-input">
+    <button id="check-answer">Antwort überprüfen</button>
+    <br><br>
+    <div id="result"></div>
+    <div class="correct-answer">
+      <p>Die richtige Antwort ist Paris</p>
+      <img src="Images/Lueftung_intro.png" alt="Bild von Paris">
+    </div>
+    <br><br>
+    <button id="next-question">Nächste Frage</button>
+    
+    <script>
+      const answerInput = document.getElementById("answer-input");
+      const checkAnswerBtn = document.getElementById("check-answer");
+      const resultDiv = document.getElementById("result");
+      const correctAnswerDiv = document.querySelector(".correct-answer");
+      const nextQuestionBtn = document.getElementById("next-question");
+      
+      checkAnswerBtn.addEventListener("click", function() {
+        if (answerInput.value.toLowerCase() === "paris") {
+          resultDiv.innerHTML = "Richtig!";
+        } else {
+          resultDiv.innerHTML = "Falsch.";
+          correctAnswerDiv.style.display = "block";
+        }
+      });
+      
+      nextQuestionBtn.addEventListener("click", function() {
+        window.location.href = "http://www.example.com/next-question.html";
+      });
+    </script>
+
+    <p>
+    
+  
+  </body>
+</html>
