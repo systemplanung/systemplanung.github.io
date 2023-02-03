@@ -1,7 +1,7 @@
 <html>
   <head>
 
-	<title>Lernhilfe/L&Uuml;ftung</title>
+	<title>Lernhilfe/L&uuml;ftung</title>
     <style>
       body {
       background-color: #000000;
@@ -35,6 +35,7 @@
       checkAnswerBtn.addEventListener("click", function() {
         if (answerInput.value.toLowerCase() === "paris") {
           resultDiv.innerHTML = "Richtig!";
+		  correctAnswerDiv.style.display = "block";
         } else {
           resultDiv.innerHTML = "Falsch.";
           correctAnswerDiv.style.display = "block";
